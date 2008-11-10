@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<!DOCTYPE log4j:configuration SYSTEM "dtds/org/apache/log4j/xml/log4j.dtd"> 
+    
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+   
+  <appender name="consola" class="org.apache.log4j.ConsoleAppender">		
+	<layout class="org.apache.log4j.PatternLayout">
+	    <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} [%c] %-5p - %m%n" />
+	</layout>
+	</appender> 
+
+   <appender name="archivoDeTexto" class="org.apache.log4j.FileAppender">
+          <param name="File" value="archivo.log"/>
+          <layout class="org.apache.log4j.PatternLayout">
+               <param name="ConversionPattern"
+	              value="[Time: %d] [Thread: %t] [Level: %p]%m%n" />
+          </layout>
+    </appender>
+    
+    <appender name="archivoDeTextoRolling" class="org.apache.log4j.RollingFileAppender"> 
+    		<param name="file" value="archivoRolling.log"/>
+    		<param name="MaxFileSize" value="100KB"/>
+    		<!-- un archivo de respaldo -->
+    		<param name="MaxBackupIndex" value="1"/>
+    		<layout class="org.apache.log4j.PatternLayout"> 
+      				<param name="ConversionPattern" value="%p %t %c - %m%n"/> 
+    		</layout> 
+  	</appender>
+  	
+  	<!--
+  	<appender name="EMAIL"  class="org.apache.log4j.net.SMTPAppender">
+        <param name="BufferSize" value="512" />
+        <param name="SMTPHost" value="smtp.foobar.com" />
+        <param name="From" value="log4j@server5" />
+        <param name="To" value="neo@foobar.com" />
+        <param name="Subject" value="[SMTPAppender] Application message" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+              value="[%d{ISO8601}]%n%n%-5p%n%n%c%n%n%m%n%n" />
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="ERROR"/>
+            <param name="LevelMax" value="FATAL"/>
+        </filter>
+    </appender>
+    -->
+     
+  <root>   
+     <!-- estos son los niveles que quiero imprimir del log-->
+     
+     <level value="fatal"></level>
+     <!--<level value="error"></level>-->
+     
+     
+     <!-- estas son las salidas que le doy al log-->
+     
+     <appender-ref ref="consola"/> 
+     <appender-ref ref="archivoDeTexto"/> 
+     <!-- <appender-ref ref="archivoDeTextoRolling"/> -->
+     <!-- <appender-ref ref="EMAIL" />-->
+     
+   </root>
+</log4j:configuration>

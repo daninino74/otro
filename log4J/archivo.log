@@ -1,0 +1,9 @@
+[Time: 2008-08-13 17:47:47,171] [Thread: main] [Level: ERROR]hacer esto un domingo de tarde
+[Time: 2008-08-13 17:47:47,171] [Thread: main] [Level: FATAL]es
+[Time: 2008-08-14 16:26:55,218] [Thread: main] [Level: INFO]Esto es una demo de log4j
+[Time: 2008-08-14 16:26:55,218] [Thread: main] [Level: ERROR]hacer esto un domingo de tarde
+[Time: 2008-08-14 16:26:55,218] [Thread: main] [Level: WARN]Entro a Casa
+[Time: 2008-08-14 16:26:55,218] [Thread: main] [Level: DEBUG]Estoy en la clase accion
+[Time: 2008-08-14 16:26:55,218] [Thread: main] [Level: FATAL]es
+[Time: 2008-08-14 16:26:55,218] [Thread: main] [Level: INFO]Fin de la demo
+[Time: 2008-08-14 16:27:40,406] [Thread: main] [Level: FATAL]es
